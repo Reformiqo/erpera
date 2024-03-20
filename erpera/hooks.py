@@ -61,7 +61,7 @@ app_license = "MIT"
 # Installation
 # ------------
 
-# before_install = "erpera.install.before_install"
+before_install = "erpera.install.before_install"
 # after_install = "erpera.install.after_install"
 
 # Uninstallation
