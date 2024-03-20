@@ -69,8 +69,16 @@ def color(color, hex):
 
 #edit erpnext setting and erpera titles
 def edit_erp_info():
-    frappe.db.set_value("Workspace", "ERPNext Settings", "title", "ERPera Settings")
-    frappe.db.set_value("Workspace", "ERPNext Integrations", "title", "ERPera Integrations")
-    frappe.db.set_value("Workspace", "ERPNext Integrations", "name", "ERPera Integrations")
-    frappe.db.set_value("Workspace", "ERPNext Settings", "name", "ERPera Settings")
-    frappe.db.commit()
+    settings = frappe.get_doc("Workspace", "ERPNext Settings")
+    integration = frappe.get_doc("Workspace", "ERPNext Integrations")
+    if frappe.db.exists("Workspace", "ERPNext Settings"):
+        frappe.db.set_value("Workspace", "ERPNext Settings", "title", "ERPera Settings")
+        frappe.db.set_value("Workspace", "ERPNext Settings", "name", "ERPera Settings")
+        frappe.db.commit()
+    if frappe.db.exists("Workspace", "ERPNext Integrations"):
+        frappe.db.set_value("Workspace", "ERPNext Integrations", "title", "ERPera Integrations")
+        frappe.db.set_value("Workspace", "ERPNext Integrations", "name", "ERPera Integrations")
+        frappe.db.commit()
+    
+    
+    
