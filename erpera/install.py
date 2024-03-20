@@ -9,7 +9,7 @@ def before_install():
 
 
     #edit the systemsettings doctype
-    frappe.db.set_value("System Settings", "enable_onboarding", 0)
+    frappe.db.set_value("System Settings", "System Settings", "enable_onboarding", 0)
     frappe.db.commit()
 
     #edit the website settings doctype
