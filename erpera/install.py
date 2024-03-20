@@ -9,9 +9,8 @@ def before_install():
 
 
     #edit the systemsettings doctype
-    system_settings = frappe.get_doc("System Settings")
-    system_settings.enable_onboarding = 0
-    system_settings.save(ignore_permissions=True)
+    frappe.db.set_value("System Settings", "enable_onboarding", 0)
+    frappe.db.commit()
 
     #edit the website settings doctype
     web_settings = frappe.get_doc("Website Settings")
