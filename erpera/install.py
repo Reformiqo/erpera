@@ -16,19 +16,19 @@ def before_install():
     web_settings = frappe.get_doc("Website Settings")
     web_settings.disable_signup = 1
     # web_settings.website_theme = "Erpera"
-    web_settings.banner_image = "https://erpera.io/wp-content/uploads/2024/02/erp-logo-01-blk-768x133.png"
-    web_settings.splash_image = "https://erpera.io/wp-content/uploads/2024/02/erp-logo-01-blk-768x133.png"
-    web_settings.favicon = "https://erpera.io/wp-content/uploads/2024/02/erp-logo-01-blk-768x133.png"
-    web_settings.footer_logo = "https://erpera.io/wp-content/uploads/2024/02/erp-logo-01-blk-768x133.png"
+    web_settings.banner_image = "https://ucarecdn.com/358ec918-a0b2-44ba-9fc0-f674e05f40d9/-/preview/768x133/"
+    web_settings.splash_image = "https://ucarecdn.com/358ec918-a0b2-44ba-9fc0-f674e05f40d9/-/preview/768x133/"
+    web_settings.favicon = "https://ucarecdn.com/358ec918-a0b2-44ba-9fc0-f674e05f40d9/-/preview/768x133/"
+    web_settings.footer_logo = "https://ucarecdn.com/358ec918-a0b2-44ba-9fc0-f674e05f40d9/-/preview/768x133/"
     web_settings.footer_powered = "Erpera"
     web_settings.hide_footer_signup = 1
     web_settings.app_name = "Erpera"
-    web_settings.app_logo = "https://erpera.io/wp-content/uploads/2024/02/erp-logo-01-blk-768x133.png"
+    web_settings.app_logo = "https://ucarecdn.com/358ec918-a0b2-44ba-9fc0-f674e05f40d9/-/preview/768x133/"
     web_settings.save()
 
     #navbar settings
     navbar = frappe.get_doc("Navbar Settings")
-    navbar.app_logo = "https://erpera.io/wp-content/uploads/2024/02/erp-logo-01-blk-768x133.png"
+    navbar.app_logo = "https://ucarecdn.com/358ec918-a0b2-44ba-9fc0-f674e05f40d9/-/preview/768x133/"
     navbar.logo_width = 200
     navbar.save()
 
