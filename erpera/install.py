@@ -18,7 +18,7 @@ def before_install():
     # web_settings.website_theme = "Erpera"
     web_settings.banner_image = "https://ucarecdn.com/358ec918-a0b2-44ba-9fc0-f674e05f40d9/-/preview/768x133/"
     web_settings.splash_image = "https://ucarecdn.com/358ec918-a0b2-44ba-9fc0-f674e05f40d9/-/preview/768x133/"
-    web_settings.favicon = "https://ucarecdn.com/358ec918-a0b2-44ba-9fc0-f674e05f40d9/-/preview/768x133/"
+    web_settings.favicon = "https://reformiqo.erpera.io/files/erp%20logo-03.jpg"
     web_settings.footer_logo = "https://ucarecdn.com/358ec918-a0b2-44ba-9fc0-f674e05f40d9/-/preview/768x133/"
     web_settings.footer_powered = "Erpera"
     web_settings.hide_footer_signup = 1
@@ -33,7 +33,6 @@ def before_install():
     navbar.save()
 
     #edit the erpnext settings doctype
-    edit_erp_info()
 
 
 #create a theme for the app
@@ -68,15 +67,6 @@ def color(color, hex):
     cl.save()
 
 #edit erpnext setting and erpera titles
-def edit_erp_info():
-    if frappe.db.exists("Workspace", "ERPNext Settings"):
-        frappe.db.set_value("Workspace", "ERPNext Settings", "title", "ERPera Settings")
-        frappe.db.set_value("Workspace", "ERPNext Settings", "name", "ERPera Settings")
-        frappe.db.commit()
-    if frappe.db.exists("Workspace", "ERPNext Integrations"):
-        frappe.db.set_value("Workspace", "ERPNext Integrations", "title", "ERPera Integrations")
-        frappe.db.set_value("Workspace", "ERPNext Integrations", "name", "ERPera Integrations")
-        frappe.db.commit()
-    
+
     
     
