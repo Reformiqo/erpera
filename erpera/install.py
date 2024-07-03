@@ -28,8 +28,9 @@ def before_install():
 
     #navbar settings
     navbar = frappe.get_doc("Navbar Settings")
+    navbar.logo_width = 150
     navbar.app_logo = "https://ucarecdn.com/358ec918-a0b2-44ba-9fc0-f674e05f40d9/-/preview/768x133/"
-    navbar.logo_width = 200
+    navbar.logo_width = 150
     navbar.save()
 
     #edit the erpnext settings doctype
