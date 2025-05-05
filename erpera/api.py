@@ -50,9 +50,18 @@ def get_site_info():
     user_count = get_user_count()
     database_size = get_database_size()
     activities = activity_log()
+    storage_percentage = (float(storage.split()[0]) / 1) * 100
+    database_percentage = (float(database_size) / 1) * 100
+    email_count = frappe.db.count("Email Account")
+    user_count_percentage = (float(user_count) / 10) * 100
     return {
         "storage": storage,
         "user_count": user_count,
         "database_size": database_size,
-        "activities": activities
+        "activities": activities,
+        "email_count": email_count,
+        "user_count_percentage": user_count_percentage,
+        "storage_percentage": storage_percentage,
+        "database_percentage": database_percentage,
+        "email_count_percentage": email_count_percentage
     }
