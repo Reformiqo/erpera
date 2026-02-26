@@ -213,3 +213,13 @@ before_install = "erpera.install.before_install"
 # auth_hooks = [
 # 	"erpera.auth.validate"
 # ]
+
+fixtures = [
+    {"doctype": "Client Script", 
+    "filters": [["module" , "in" , ("Erpera")]]
+    },
+    {"doctype": "Custom Field",
+    "filters": [["module" , "in" , ("Erpera")]]
+    },
+  
+    ]
